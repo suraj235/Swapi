@@ -20,7 +20,7 @@ export default function CharactersList() {
 
     return(
         <div className="container0 py-10 md:py-14">
-            <div className="w-3/5 mx-auto border dark:border-gray-800 rounded-lg px-6 py-10">
+            <div className="md:w-3/5 w-11/12 mx-auto border dark:border-gray-800 rounded-lg px-6 py-10">
                 <h2 className="text-2xl font-bold text-blue-900">{ data.name } Details</h2>
                 <div className="mt-6">
                    <p className="text-lg"><b>Name: </b> { data.name }</p>

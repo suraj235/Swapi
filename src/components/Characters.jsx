@@ -34,7 +34,6 @@ function Characters() {
     };
 
     fetchData();
-    console.log(charactersList)
   }, [page]);
 
   if (isLoading) {
@@ -48,14 +47,14 @@ function Characters() {
   return (
     <div>
       <h2 className='text-2xl font-medium mb-4'>Star War Characters</h2>
-      <div className='grid grid-cols-2 gap-8 w-11/12'>
+      <div className='grid grid-cols-2 md:gap-8 gap-5'>
         { charactersList && charactersList.results.map( ( character, index) =>
           (
-            <div key={index} className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <div className="flex flex-col items-center py-6">
+            <div key={(index+1) + 10*(page - 1)} className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className="flex flex-col items-center md:py-6 py-4 px-3">
                   <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">{ character.name && character.name }</h5>
                   <span className="text-base text-gray-500 dark:text-gray-400">{ character.species.length > 0 && character.species.map( (s, index) => (
-                    <div className='flex'>
+                    <div key={index} className='flex'>
                       <b className='mr-1'>Species:</b> <Species endpointUrl={s} key={index}/>
                     </div>
                   ) ) }</span>
