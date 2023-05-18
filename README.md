@@ -2,9 +2,9 @@
 
 This project was created using TailwindCss and [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Steps to run this app on your local environment.
 
-In the project directory, you can run:
+- Clone the repo to your system.
 
 ### `npm start`
 
